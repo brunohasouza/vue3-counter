@@ -6,11 +6,13 @@ import App from './App.vue'
 const lifecycles = singleSpaVue({
   createApp,
   appOptions: {
-    render: () => h(App, {
-      name: this.name,
-      mountParcel: this.mountParcel,
-      singleSpa: this.singleSpa
-    })
+    render() { 
+      return h(App, {
+        name: this.name,
+        mountParcel: this.mountParcel,
+        singleSpa: this.singleSpa
+      })
+    }
   }
 })
 
